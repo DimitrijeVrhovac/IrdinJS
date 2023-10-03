@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <div></div>
+  <div>App page </div>
 </template>
