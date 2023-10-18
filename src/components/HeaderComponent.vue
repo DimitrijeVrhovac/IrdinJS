@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-  <span class="first-name">IRDIN</span><span class="last-name">DINČI</span>
+  <span class="first-name">IRDIN</span><span class="last-name"><i>DINČI</i></span>
 </div>
   <nav class="main-nav">
     <router-link to="/">Home</router-link>
@@ -29,6 +29,7 @@
 nav a {
   text-decoration: none;
   font-size: clamp(2rem , 2vw , 3rem);
+  color: white;
 }
 
 
@@ -36,7 +37,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aqua;
+  background-color: transparent;
 }
 .first-name {
   color: black;
