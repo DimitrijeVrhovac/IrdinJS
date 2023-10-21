@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-  <span class="first-name">IRDIN</span><span class="last-name"><i>DINČI</i></span>
+  <span class="first-name">IRDIN</span><span class="last-name">DINČI</span>
 </div>
   <nav class="main-nav">
     <router-link to="/">Home</router-link>
@@ -45,7 +45,7 @@ nav a {
 }
 .last-name {
   color: red;
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 </style>

@@ -11,7 +11,7 @@
 <style>
  footer {
     background-color: bisque;
-    padding: 0.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,6 +1,6 @@
 <template>
     <div v-if="isLoading" class="wrapper">
-      <i class="fa-solid fa-music fa-beat-fade fa-2xl"></i>
+      <i class="fa-solid fa-music fa-beat-fade fa-9x"></i>
     </div>
   </template>
   
@@ -11,8 +11,8 @@
   
   onMounted(() => {
     setTimeout(() => {
-      isLoading.value = false; // Postavite isLoading na false
-    }, 3000);
+      isLoading.value = false; 
+    }, 2500);
   });
   </script>
 
@@ -20,7 +20,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 .wrapper {
-    position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
