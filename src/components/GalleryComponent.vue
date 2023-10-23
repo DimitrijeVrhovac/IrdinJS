@@ -2,9 +2,9 @@
 <div class="img">
 
 <img v-for="image in images" :key="image.id" :src="image.url"  :show="showModal" @click="showModal=true">
-
+<Teleport to="body">
 <ImgModalComponent :show="showModal" @close="showModal=false"/>
-
+</Teleport>
 </div>  
 </template>
 
