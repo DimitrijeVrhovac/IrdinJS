@@ -19,7 +19,7 @@ import  {ref} from 'vue'
 
   store.fill()
 
-  const showModal = ref(true)
+  const showModal = ref(false)
 
 
 </script>
@@ -28,13 +28,18 @@ import  {ref} from 'vue'
 
 .img {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  gap: 0.026rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  gap: 0.5rem;
 }
 
 img { 
-  max-width: 10rem;
-  max-height: 10rem;
+  height: 10rem;
+  width: 15rem;
+  max-width: 15rem;
+  max-height: 15rem;
+  border: 0.06rem solid black;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px #888888;
 }
 
 </style>

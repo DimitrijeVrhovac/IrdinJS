@@ -9,9 +9,10 @@
 
 <script setup>
 
+import { ref } from 'vue';
 
  defineProps({
-  show : Boolean
+  show : ref(Boolean)
  })
 </script >
 

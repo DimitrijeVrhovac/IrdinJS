@@ -19,7 +19,7 @@
 <style  scoped>
 
 .main-nav {
-  background-color: grey;
+  background-color: transparent;
   padding: 1rem;
   display: flex;
   flex-direction: row;
@@ -29,7 +29,7 @@
 nav a {
   text-decoration: none;
   font-size: clamp(2rem , 2vw , 3rem);
-  color: white;
+  color: gray;
 }
 
 
