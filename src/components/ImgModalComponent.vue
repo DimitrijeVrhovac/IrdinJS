@@ -2,7 +2,7 @@
   <Transition  name="modal" >
   <div class="modal" v-if="show">
     <div class="modal-content"  >
-      
+      <img :src="currentImage.url"  alt="Image" />
       <button @click="$emit('close')">close</button>
     </div>
   </div>
@@ -12,10 +12,23 @@
 <script setup>
 
 import { ref } from 'vue';
+import {useGalleryStore} from '../stores/galleryStore'
+import { computed } from 'vue';
+const store = useGalleryStore()
+
+  const images = store.images
+
+  const currentIndex = ref(0)
+
+  
 
  defineProps({
   show : ref(Boolean)
  })
+
+ const currentImage = computed(() => images[currentIndex.value]);
+
+
 </script >
 
 <style scoped>
@@ -27,14 +40,15 @@ import { ref } from 'vue';
     place-items: center;
   }
   .modal-content {
-  background-color: white;
+  background-color: transparent;
   padding: 1rem;
   width: 80vw;
   max-width: 800px;
   border-radius: 7px;
   height: 800px;
   max-height: 80vh;
-  
+  display: grid;
+  place-items: center;
   }
 
   .modal-enter-active , .modal-leave-active {
@@ -45,6 +59,11 @@ import { ref } from 'vue';
   }
  .modal-enter-to, .modal-leave-from {
     opacity: 100;
+  }
+
+  img {
+    width: 90%;
+    height: 90%;
   }
   
  

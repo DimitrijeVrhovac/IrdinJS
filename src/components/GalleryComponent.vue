@@ -1,9 +1,9 @@
 <template>
 <div class="img">
 
-<img v-for="image in images" :key="image.id" :src="image.url"  :show="showModal" @click="showModal=true">
+<img v-for="image in images" :key="image.id" :src="image.url"  :show="showModal" @click="openModal(image)">
 <Teleport to="body">
-<ImgModalComponent :show="showModal" @close="showModal=false"/>
+<ImgModalComponent :show="showModal" :currentImage="currentImage" @close="closeModal" />
 </Teleport>
 </div>  
 </template>
@@ -20,6 +20,20 @@ import  {ref} from 'vue'
   store.fill()
 
   const showModal = ref(false)
+  const currentImage = ref(null)
+  const currentIndex = ref(null)
+
+  function openModal(image) {
+    currentIndex.value = images.findIndex((img) => img.id === image.id);
+  currentImage.value = images[currentIndex.value];
+  showModal.value = true;
+  console.log(image.id)
+}
+
+function closeModal() {
+  currentImage.value = null;
+  showModal.value = false;
+}
 
 
 </script>
@@ -40,6 +54,7 @@ img {
   border: 0.06rem solid black;
   border-radius: 1rem;
   box-shadow: 5px 5px 10px #888888;
+  cursor: pointer;
 }
 
 </style>

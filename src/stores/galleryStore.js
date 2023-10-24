@@ -5,14 +5,12 @@ export const useGalleryStore = defineStore ('gallery' , {
         images : []
     }) ,
     actions : {
-         fill() {
-              import('../jsonFolder/gallery.json').then(r => {
-                let data = r.default;
+        async fill() {
+              let data = await import('../jsonFolder/gallery.json')
 
-                this.images = data.images
-            })
-        }
-         } ,
+                this.$state = data.default ;
 
-    
-}) ;
+
+            } } 
+
+        })
