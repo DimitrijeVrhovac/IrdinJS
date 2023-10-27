@@ -3,7 +3,7 @@
   <div class="modal" v-if="show">
     <div class="modal-content"  >
       <img :src="currentImage.url"  alt="Image" />
-      <button @click="$emit('close')">close</button>
+      <button class="button" @click="$emit('close')">close</button>
     </div>
   </div>
 </Transition>
@@ -17,16 +17,17 @@ import { computed } from 'vue';
 const store = useGalleryStore()
 
   const images = store.images
-
-  const currentIndex = ref(0)
+  const props = defineProps({
+  show : ref(Boolean),
+  currentIndex : Number
+ })
+ const currentImage = computed(() => images[props.currentIndex]);
 
   
+ 
+ 
 
- defineProps({
-  show : ref(Boolean)
- })
 
- const currentImage = computed(() => images[currentIndex.value]);
 
 
 </script >
@@ -64,6 +65,11 @@ const store = useGalleryStore()
   img {
     width: 90%;
     height: 90%;
+  }
+  button { 
+    position: absolute;
+    top : 0 ;
+    left : 0
   }
   
  
