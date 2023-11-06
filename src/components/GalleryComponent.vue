@@ -3,7 +3,7 @@
 
 <img v-for="image in images" :key="image" :src="image.url"   @click="openModal(image)">
 <Teleport to="body">
-<ImgModalComponent :show="showModal" :currentImage="currentImage" :currentIndex="currentIndex" @close="closeModal" />
+<ImgModalComponent :show="showModal" :currentImage="currentImage" :currentIndex="currentIndex " @close="closeModal" />
 </Teleport>
 </div>  
 </template>
@@ -27,7 +27,7 @@ import  {ref} from 'vue'
     currentIndex.value = images.findIndex((img) => img.url === image.url);
   currentImage.value = images[currentIndex.value];
   showModal.value = true;
-  console.log(image)
+  
 }
 
 function closeModal() {

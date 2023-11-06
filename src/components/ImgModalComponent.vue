@@ -2,7 +2,11 @@
   <Transition  name="modal" >
   <div class="modal" v-if="show">
     <div class="modal-content"  >
+      <div class="img-modal">
+      <button @click="previousImage()" class="previous">previous</button>
       <img :src="currentImage.url"  alt="Image" />
+      <button @click="nextImage()" class="next">next</button>
+    </div>
       <button class="button" @click="$emit('close')">close</button>
     </div>
   </div>
@@ -14,18 +18,34 @@
 import { ref } from 'vue';
 import {useGalleryStore} from '../stores/galleryStore'
 import { computed } from 'vue';
-const store = useGalleryStore()
+import { watch } from 'vue';
 
-  const images = store.images
+  const store = useGalleryStore()
+  
   const props = defineProps({
   show : ref(Boolean),
   currentIndex : Number
  })
- const currentImage = computed(() => images[props.currentIndex]);
 
-  
- 
- 
+ const currentIndexInArrey = ref(props.currentIndex)
+ const images = store.images
+ watch(() => props.currentIndex, (newIndex) => {
+  currentIndexInArrey.value = newIndex;
+});
+
+ const currentImage = computed(() => images[currentIndexInArrey.value]);
+
+function nextImage() {
+  if(currentIndexInArrey.value < images.length - 1) {
+    currentIndexInArrey.value ++
+  }
+} ;
+
+function previousImage() {
+  if(currentIndexInArrey.value > 0) {
+    currentIndexInArrey.value--
+  }
+}
 
 
 
@@ -63,14 +83,38 @@ const store = useGalleryStore()
   }
 
   img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
   }
-  button { 
+  .button { 
     position: absolute;
     top : 0 ;
-    left : 0
+    left : 0;
+    cursor: pointer;
+    
   }
+
+  .img-modal {
+    display: grid;
+    place-content: center;
+  }
+
+  .next {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+
+  .previous {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    cursor: pointer;
+  }
+  
   
  
 </style>
