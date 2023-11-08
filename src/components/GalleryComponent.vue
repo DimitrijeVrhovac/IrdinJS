@@ -42,19 +42,21 @@ function closeModal() {
 
 .img {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
-  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr ;
+  place-items:center;
+  background-color:#f8f4e3;
+ 
 }
 
 img { 
-  height: 10rem;
-  width: 15rem;
-  max-width: 15rem;
-  max-height: 15rem;
-  border: 0.06rem solid black;
-  border-radius: 1rem;
-  box-shadow: 5px 5px 10px #888888;
+  width: 70%;
+  height:50%;
+  object-fit: cover;
+  border: 0.06rem solid lightgrey;
+  box-shadow: 4px 4px 8px grey;
   cursor: pointer;
 }
+
+
 
 </style>

@@ -1,19 +1,79 @@
 {
-    "images" : [
-      {
-       
-        "url" : "../images/image.jpg"
-        } ,
-       {
-      
-        "url" : "../images/image2.jpg"
-            } , 
-       {
-        
-        "url" : "../images/image3.jpg"
-            }  ,
-       {
-        
-        "url" : "../images/image4.jpg"}
-]
+  "images": [
+    {
+      "url": "../images/img.jpg"
+    },
+    {
+      "url": "../images/img1.jpg"
+    },
+    {
+      "url": "../images/img2.jpg"
+    },
+    {
+      "url": "../images/img3.jpg"
+    },
+
+    {
+      "url": "../images/img4.jpg"
+    },
+
+    {
+      "url": "../images/img5.jpg"
+    },
+    {
+      "url": "../images/img6.jpg"
+    },
+    {
+      "url": "../images/img7.jpg"
+    },
+    {
+      "url": "../images/img8.jpg"
+    },
+    {
+      "url": "../images/img9.jpg"
+    },
+    {
+      "url": "../images/img10.jpg"
+    },
+    {
+      "url": "../images/img11.jpg"
+    },
+    
+    {
+      "url": "../images/img13.jpg"
+    },
+    {
+      "url": "../images/img14.jpg"
+    },
+    {
+      "url": "../images/img15.jpg"
+    },
+    
+    {
+      "url": "../images/img17.jpg"
+    },
+    {
+      "url": "../images/img18.jpg"
+    },
+    {
+      "url": "../images/img19.jpg"
+    },
+    {
+      "url": "../images/img20.jpg"
+    },
+    {
+      "url": "../images/img21.jpg"
+    },
+    {
+      "url": "../images/img22.jpg"
+    },
+    
+    {
+      "url": "../images/img24.jpg"
+    },
+    {
+      "url": "../images/img25.jpg"
+    }
+    
+  ]
 }

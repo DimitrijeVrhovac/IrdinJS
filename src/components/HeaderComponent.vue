@@ -20,16 +20,17 @@
 
 .main-nav {
   background-color: transparent;
-  padding: 1rem;
+  
+  margin-bottom: 5rem ;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5rem;
+  gap: 10rem;
 }
 nav a {
   text-decoration: none;
   font-size: clamp(2rem , 2vw , 3rem);
-  color: gray;
+  color: #A9BCD0;
 }
 
 
@@ -38,14 +39,15 @@ nav a {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  margin: 0;
 }
 .first-name {
   color: black;
-  font-size: 5vw;
+  font-size: 8vw;
 }
 .last-name {
-  color: red;
-  font-size: 5vw;
+  color: #ff930a;
+  font-size: 8vw;
 }
 
 </style>
