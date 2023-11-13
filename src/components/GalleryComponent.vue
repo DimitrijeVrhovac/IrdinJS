@@ -44,7 +44,8 @@ function closeModal() {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
   place-items:center;
-  background-color:#f8f4e3;
+  
+  background-color:transparent;
  
 }
 

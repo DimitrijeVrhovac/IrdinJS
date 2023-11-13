@@ -1,21 +1,27 @@
 <script setup>
-import FooterComponent from './components/FooterComponent.vue';
-import HeaderComponent from './components/HeaderComponent.vue';
-import LoaderComponent from './components/LoaderComponent.vue';
+import FooterComponent from './components/FooterComponent.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
+import LoaderComponent from './components/LoaderComponent.vue'
 </script>
 
 <template>
-  <div>
+  <div class="main">
     <LoaderComponent />
 
+    <HeaderComponent />
+    <RouterView />
+
+    <FooterComponent />
   </div>
-  <HeaderComponent/>    
-  <RouterView/>
-
-
-<FooterComponent/>
 </template>
 
 <style scoped>
+
+.main {
+  
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
 
 </style>

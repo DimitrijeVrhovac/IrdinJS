@@ -1,18 +1,23 @@
 <template>
+  <div class="content">
+    <div class="banner">
+      <div class="overlay"></div>
+    </div>
   <div class="logo">
   <router-link to="/" style="text-decoration: none;"><span class="first-name">IRDIN</span><span class="last-name">DINČI</span><span class="music">music</span></router-link>
   
 </div>
   <nav class="main-nav">
-    <router-link to="/">Pocetna</router-link>
-    <router-link to="/about">O Irdinu</router-link>
-    <router-link to="/gallery">Galerija</router-link>
-    <router-link to="/contact">Kontakt</router-link>
+    <router-link class="nav-link" to="/">Pocetna</router-link>
+    <router-link class="nav-link" to="/about">O Irdinu</router-link>
+    <router-link class="nav-link" to="/gallery">Galerija</router-link>
+    <router-link class="nav-link" to="/contact">Kontakt</router-link>
     
   </nav>
   <div class="social-media">
   <a :href="instagram" target="_blank"><i class="fa-brands fa-instagram fa-4x" style="color: #001514;"></i></a>
   <a :href="you_tube" target="_blank"><i class="fa-brands fa-youtube fa-4x" style="color: #001514;"></i></a>
+  </div>
   </div>
 </template>
 
@@ -28,6 +33,21 @@ const you_tube = ref('https://www.youtube.com/@IrdinDinciOfficial/featured')
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Edu+TAS+Beginner:wght@400;500;700&family=Fira+Mono:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@400;700&family=Raleway:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,300&display=swap');
 
+.content {
+  height: 55vh;
+}
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55vh;
+  background-image: url('/images/irdinCover.jpg');
+  background-size: cover;
+  z-index: -1; 
+  opacity: 0.9;
+  
+  }
 .main-nav {
   background-color: transparent;
   
@@ -72,6 +92,39 @@ nav a {
   position: fixed;
   top: 2%;
   left: 2%;
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3); 
+  z-index: 1; 
+}*/
+
+.nav-link {
+  position: relative;
+  color: black;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #ff930a;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 </style>
