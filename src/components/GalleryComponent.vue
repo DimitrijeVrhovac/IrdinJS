@@ -53,6 +53,7 @@ img {
   height:50%;
   object-fit: cover;
   border: 0.06rem solid lightgrey;
+  border-radius: 10px;
   box-shadow: 4px 4px 8px grey;
   cursor: pointer;
 }

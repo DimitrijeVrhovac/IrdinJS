@@ -3,12 +3,12 @@
    
   <div class="modal" v-if="show">
     
-    <button @click="previousImage()" class="previous">previous</button>
+    <button  @click="previousImage()" class="previous"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
       
       <div class="img-modal">
       <img :src="currentImage.url"  alt="Image" />
     </div>
-    <button @click="nextImage()" class="next">next</button>
+    <button  @click="nextImage()" class="next"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
       <button class="button" @click="$emit('close')">X</button>
     </div>
     
@@ -18,7 +18,7 @@
 
 <script setup>
 
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import {useGalleryStore} from '../stores/galleryStore'
 import { computed } from 'vue';
 import { watch } from 'vue';
@@ -52,8 +52,22 @@ function previousImage() {
   } else {
     currentIndexInArrey.value = images.length - 1
   }
-}
+} ;
+onMounted(() => {
+  window.addEventListener("keydown", handleKeyPress);
+});
+onUnmounted(() => {
+  window.removeEventListener("keydown", handleKeyPress);
+});
 
+
+const handleKeyPress = (event) => {
+  if (event.key === "ArrowLeft") {
+    previousImage();
+  } else if (event.key === "ArrowRight") {
+    nextImage();
+  }
+};
 
 
 
@@ -89,8 +103,8 @@ function previousImage() {
   max-height: 800px;
   max-width: 1200px;
   object-fit: contain; 
-  /*padding: 4rem;*/ 
-  border: 1px solid lightgray;
+  padding: 4rem 0 4rem 0;
+ 
   }
   .button { 
     position:absolute;
@@ -129,7 +143,7 @@ function previousImage() {
 
   .previous {
     position: absolute;
-    left: 80%;
+    left: 5%;
     background-color: transparent;
     border: none;
     font-size: 2rem;

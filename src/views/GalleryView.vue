@@ -3,7 +3,7 @@
   </template>
   
   <script setup>
-  import GalleryComponent from '../components/GalleryComponent.vue'
+  import GalleryComponent from '@/components/GalleryComponent.vue'
   
  
   
