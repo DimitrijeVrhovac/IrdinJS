@@ -30,10 +30,27 @@
         margin : 3rem
     }
     .text {
+        border: 1px solid grey;
+        
         margin-left: 3rem;
         margin-right: 3rem;
     }
-    .text p {
-        font-size: 1.5vw;
+     p {
+        font-size: 2vw;
+    }
+
+    @media all and (max-width:600px){
+        *{
+            border: none;
+        }
+        .about{
+            margin: 5vw;
+            border: none;
+        }
+
+        p {
+            font-size: 5vw;
+            border: none;
+        }
     }
 </style>

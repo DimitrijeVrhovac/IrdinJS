@@ -60,5 +60,13 @@ img {
 }
 
 
+@media all and (max-width: 600px) {
+  .img{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+
 
 </style>

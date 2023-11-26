@@ -31,4 +31,27 @@ import TableComponent from '../components/TableComponent.vue';
     border: 2px solid grey;
     box-shadow: 1px 1px 1px grey;
   }
+
+
+  @media all and (max-width:600px) {
+
+    .videos{
+      display: grid;
+      grid-template-columns: 1fr;
+      place-items: center;
+    }
+    .video-one {
+    width: 90%;
+    height: 70vh;
+    border: 2px solid grey;
+    box-shadow: 1px 1px 1px  grey;
+  }
+
+  .video-two {
+    width: 90%;
+    height: 70vh;
+    border: 2px solid grey;
+    box-shadow: 1px 1px 1px grey;
+  }
+  }
 </style>

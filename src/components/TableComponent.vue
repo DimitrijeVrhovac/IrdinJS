@@ -13,28 +13,49 @@
     </thead>
     <tbody>
       <tr>
-        <td>01.01.2024.</td>
+        <td>24.11.2023.</td>
         <td>21:00</td>
-        <td>Frankfurt</td>
+        <td>Cirih</td>
       </tr>
       <tr>
-        <td>14.55</td>
+        <td>27.11.2023.</td>
         <td>Diskoteka</td>
         <td>Beograd</td>
       </tr>
       <tr>
-        <td>14.55</td>
+        <td>28.11.2023.</td>
+        <td>Diskoteka</td>
+        <td>Sabac</td>
+      </tr>
+      <tr>
+        <td>29.11.2023.</td>
+        <td>Diskoteka</td>
+        <td>Sarajevo</td>
+      </tr>
+      <tr>
+        <td>30.11.2023.</td>
+        <td>Diskoteka</td>
+        <td>Zenica</td>
+      </tr>
+      <tr>
+        <td>09.12.2023.</td>
         <td>Diskoteka</td>
         <td>Beograd</td>
       </tr>
       <tr>
-        <td>14.55</td>
+        <td>18.12.2023.</td>
         <td>Diskoteka</td>
-        <td>Beograd</td>
+        <td>Vicenca Italija</td>
+      </tr>
+      <tr>
+        <td>13.02.2024.</td>
+        <td>Diskoteka</td>
+        <td>Kraljevo</td>
       </tr>
     </tbody>
-    </table>
+    </table> 
   </div>
+  <p class="text" style="display: flex; background-color: #EBE3D5; flex-direction: row; align-items: center; justify-content: center; font-size: 6vw;"><b>Usoro dve nove pesme !!</b></p>
 </template>
 
 <script setup>
@@ -68,5 +89,18 @@ table {
     align-items: center;
    
    
+    }
+
+    @media all and (max-width: 600px){
+      .table {
+        position: relative;
+        top: 20px;
+      }
+
+      .text{
+        margin-top: 0.7rem;
+        border: none;
+        background-color: transparent !important;
+      }
     }
 </style>
