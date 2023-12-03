@@ -196,6 +196,8 @@ nav a {
   }
 
   .menu-toggle {
+    top: 3%;
+    right: 5%;
     position: absolute;
     display: block;
     z-index: 9999;
@@ -210,8 +212,8 @@ nav a {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    top: 14%;
-    left: 0;
+    top: 10%;
+    left: 11%;
     width: 80%;
     background-color: white;
     border: 1px solid #ccc;
@@ -224,7 +226,7 @@ nav a {
   }
 
   .content {
-    height: 20vh;
+    height: 10vh;
   }
 }
 </style>

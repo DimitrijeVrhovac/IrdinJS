@@ -9,7 +9,7 @@
   <iframe class="video-six" width="560" height="315" src="https://www.youtube.com/embed/fNci1zHehLY?si=GQ0FuwjMi6hYzJ7B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   <div class="info">
-    <p>USKORO NOVE DVE PESME</p>
+    <p>USKORO DVE NOVE PESME</p>
   </div>
 </template>
 
