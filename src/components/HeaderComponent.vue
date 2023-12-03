@@ -4,9 +4,9 @@
       <div class="overlay"></div>
     </div>
     <div class="logo">
-      <router-link to="/" style="text-decoration: none"
-        ><span class="first-name">IRDIN</span><span class="last-name">DINČI</span
-        ><span class="music">music</span></router-link
+      <router-link to="/" style="text-decoration: none">
+       <div class="name"><span class="first" style="font-family:'Ephesis', cursive; font-size: 9vw; font-weight: bold; color: black">I</span><span class="second" style="font-family:  'Ephesis', cursive; font-weight: bold; font-size: 9vw; color:#ff930a ;">D</span></div>  
+        </router-link
       >
     </div>
 
@@ -60,13 +60,24 @@ const hideMenu = () => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Edu+TAS+Beginner:wght@400;500;700&family=Fira+Mono:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@400;700&family=Raleway:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Edu+TAS+Beginner:wght@400;500;700&family=Ephesis&family=Fira+Mono:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@400;700&family=Raleway:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,300&display=swap');
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 55vh;
+}
+.name{
+  font-family:  'Ephesis', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  top: 0;
+  
+  
+  
 }
 .banner {
   position: absolute;
@@ -107,27 +118,24 @@ nav a {
 }
 
 .logo {
-  position: sticky;
+  position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  margin: 0;
-}
-.first-name {
-  color: black;
-  font-size: 8vw;
-}
-.last-name {
-  color: #ff930a;
-  font-size: 8vw;
+ 
+  
+
 }
 
-.music {
-  font-size: 2.5vw;
-  font-family: 'Edu TAS Beginner', cursive;
-  color: black;
+/*.logo img {
+  width: 20vw;
+  height: 25vh;
 }
+*/
+
+
 
 .social-media {
   position: fixed;
@@ -180,21 +188,9 @@ nav a {
     left: 2%;
   }
 
-  .first-name {
-    color: black;
-    font-size: 10vw;
-  }
-  .last-name {
-    color: #ff930a;
-    font-size: 10vw;
-  }
+  
 
-  .music {
-    font-size: 3vw;
-    font-family: 'Edu TAS Beginner', cursive;
-    color: black;
-  }
-
+  
   .menu-toggle {
     top: 3%;
     right: 5%;
