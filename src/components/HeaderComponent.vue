@@ -22,11 +22,18 @@
     </nav>
     <div class="social-media">
       <a :href="instagram" target="_blank"
-        ><i class="fa-brands fa-instagram fa-4x" style="color: #001514"></i
+        ><i class="fa-brands fa-instagram fa-3x" style="color: #001514"></i
       ></a>
       <a :href="you_tube" target="_blank"
-        ><i class="fa-brands fa-youtube fa-4x" style="color: #001514"></i
+        ><i class="fa-brands fa-youtube fa-3x" style="color: #001514"></i
       ></a>
+      <a :href="tiktok" target="_blank"
+        ><i class="fa-brands fa-tiktok fa-3x" style="color: #001514"></i
+      ></a>
+      <a :href="facebook" target="_blank"
+        ><i class="fa-brands fa-facebook-f fa-3x" style="color: #001514"></i
+      ></a>
+      
     </div>
   </div>
 </template>
@@ -36,6 +43,8 @@ import { ref } from 'vue'
 
 const instagram = ref('https://www.instagram.com/irdin_dinci/')
 const you_tube = ref('https://www.youtube.com/@IrdinDinciOfficial/featured')
+const tiktok = ref('https://www.tiktok.com/@irdindinciofficial')
+const facebook = ref("https://www.facebook.com/krnjici/")
 const menuToggle = ref(false)
 
 const toggleMenu = () => {
@@ -44,15 +53,19 @@ const toggleMenu = () => {
 
 const hideMenu = () => {
   if (window.innerWidth <= 600) {
-    menuToggle.value = false;
+    menuToggle.value = false
   }
-};
+}
 </script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Edu+TAS+Beginner:wght@400;500;700&family=Fira+Mono:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quicksand:wght@400;700&family=Raleway:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Roboto:ital,wght@0,500;0,700;1,300&display=swap');
 
 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 55vh;
 }
 .banner {
@@ -69,12 +82,13 @@ const hideMenu = () => {
 }
 .main-nav {
   background-color: transparent;
-
+  margin-top: auto;
   margin-bottom: 5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10rem;
+  align-self: center;
 }
 
 .menu-toggle {
@@ -205,12 +219,12 @@ nav a {
     z-index: 999;
   }
 
-  .menu-toggle  {
+  .menu-toggle {
     color: #ff930a;
   }
 
-  .content{
-    height:20vh;
+  .content {
+    height: 20vh;
   }
 }
 </style>
