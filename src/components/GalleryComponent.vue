@@ -59,6 +59,10 @@ img {
   cursor: pointer;
 }
 
+img:hover {
+  opacity: 0.5;
+}
+
 
 @media all and (max-width: 600px) {
   .img{
