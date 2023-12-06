@@ -139,6 +139,8 @@ nav a {
 
 .social-media {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 2%;
   left: 2%;
 }
