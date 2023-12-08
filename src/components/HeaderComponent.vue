@@ -5,10 +5,11 @@
     </div>
     <div class="logo">
       <router-link to="/" style="text-decoration: none">
-       <div class="name"><span class="first" style="font-family:'Ephesis', cursive; font-size: 9vw; font-weight: bold; color: black">I</span><span class="second" style="font-family:  'Ephesis', cursive; font-weight: bold; font-size: 9vw; color:#ff930a ;">D</span></div>  
-        </router-link
-      >
-    </div>
+       <div class="name"><span class="first" style="font-family:'Ephesis', cursive; font-size: 9vw; font-weight: bold; color: black">I</span><span class="second" style="font-family:  'Ephesis', cursive; font-weight: bold; font-size: 9vw; color:#ff930a ;">D</span><span class="music">Music</span></div>  
+        </router-link>
+
+    
+  </div>
 
     <button class="menu-toggle" id="menu-toggle" @click="toggleMenu">
       <i class="fas fa-bars"></i>
@@ -35,6 +36,13 @@
       ></a>
       
     </div>
+    <div class="links">
+      <a :href="grand" target="_blank"><img src="/images/grand.jpg" alt=""></a>
+      <a :href="express" target="_blank"><img src="/images/logo-express.png" alt=""></a>
+      <a :href="zenicaBlog" target="_blank"><img src="/images/zenicaBlog.png" alt=""></a>
+      <a :href="nezavisneNovine" target="_blank"><img src="/images/nezavisneNovine.jpg" alt=""></a>
+
+    </div>
   </div>
 </template>
 
@@ -45,6 +53,10 @@ const instagram = ref('https://www.instagram.com/irdin_dinci/')
 const you_tube = ref('https://www.youtube.com/@IrdinDinciOfficial/featured')
 const tiktok = ref('https://www.tiktok.com/@irdindinciofficial')
 const facebook = ref("https://www.facebook.com/krnjici/")
+const grand = ref("https://grand.nova.rs/showbiz/irdin-dinci-godine-su-samo-broj/")
+const express = ref("https://express.ba/tag/irdin-dinci/")
+const nezavisneNovine = ref("https://www.nezavisne.com/magazin/scena/Irdin-Dinci-objavio-spot-za-pjesmu-Godine-su-samo-broj/796594")
+const zenicaBlog = ref("https://www.zenicablog.com/zenicanin-irdin-dinci-uspjesno-gradi-muzicku-karijeru-sa-sedam-godina-pobijedio-na-djecjem-festivalu-nove-pjesme-snima-sa-banetom-vasicem-i-slavkonijem/")
 const menuToggle = ref(false)
 
 const toggleMenu = () => {
@@ -75,10 +87,15 @@ const hideMenu = () => {
   justify-content: center;
   
   top: 0;
-  
+ 
   
   
 }
+
+.music {
+  font-size: 2.5vw;
+  font-family: 'Edu TAS Beginner', cursive;
+  color: black;}
 .banner {
   position: absolute;
   top: 0;
@@ -135,7 +152,18 @@ nav a {
 }
 */
 
+.links {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+}
 
+.links img {
+  width: 4vw;
+  height: 5vh;
+}
 
 .social-media {
   position: fixed;
