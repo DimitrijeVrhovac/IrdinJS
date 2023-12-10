@@ -254,5 +254,18 @@ nav a {
   .content {
     height: 10vh;
   }
+
+  .links {
+  position: absolute;
+  display: none;
+  right: 2%;
+  display: flex;
+  flex-direction: row;
+  margin: 2%;
+  padding: 2px;
+ }
+ .links a {
+  display: none;
+ }
 }
 </style>

@@ -10,14 +10,15 @@
 
 <script setup>
 
-import {useGalleryStore} from '../stores/galleryStore'
+import {useGalleryStore} from '@/stores/galleryStore'
 import ImgModalComponent from './ImgModalComponent.vue';
 import  {ref} from 'vue'
-  const store = useGalleryStore()
+ 
+const store = useGalleryStore()
+store.fill()
+const images = store.images
 
-  const images = store.images
-
-  store.fill()
+  
 
   const showModal = ref(false)
   const currentImage = ref(null)

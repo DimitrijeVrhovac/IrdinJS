@@ -18,10 +18,17 @@ import LoaderComponent from './components/LoaderComponent.vue'
 <style scoped>
 
 .main {
-  
+  overflow-x: 0;
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
+}
+
+
+@media all and (max-width: 600px ){
+  *{
+    margin: 5px;
+  }
 }
 
 </style>
